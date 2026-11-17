@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#dfe9dc" />
+  <meta name="description" content="沿著台三線走進山、茶與客庄的生態博物館。" />
+  <title>島嶼採集所 — 台三線生態博物館</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="島嶼採集所首頁"><span class="brand-mark">山</span><span>島嶼採集所<small>ISLAND FIELD NOTES · 24°N</small></span></a>
+    <nav class="desktop-nav" aria-label="主要導覽"><a class="active" href="#map">探索島嶼</a><a href="#stories">地方誌</a><a href="#shop">山徑選物</a></nav>
+    <div class="top-actions"><button class="icon-button" id="shopOpen" aria-label="打開購物袋">袋 <span id="cartCount" class="count">0</span></button><button class="member-button" id="memberOpen"><span class="member-dot"></span><span id="memberLabel">旅人登入</span></button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="map">
+      <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> TAI SAN ROUTE · 124 KM</div><h1>沿著山的呼吸，<br><em>把日子慢慢走回來。</em></h1><p class="hero-lead">一條路，十座島。茶香、風土、人與森林，<br class="desktop-break">都在島與島之間，等你遇見。</p><div class="hero-bottom"><button class="start-button" id="startExplore"><span class="play">↗</span> 進入島嶼散步 <span class="button-note">START WALKING</span></button><span class="coordinate">北緯 24°42'　東經 121°10'</span></div></div>
+      <div class="scene-wrap" aria-label="台三線3D島嶼群場景"><div class="scene-sky"></div><div class="sun"></div><div class="scene-grid"></div><div class="island-world" id="islandWorld">
+        <div class="island island-main" data-island="0"><div class="island-top"></div><div class="terrace terrace-a"></div><div class="terrace terrace-b"></div><div class="terrace terrace-c"></div><div class="tea-row row1"></div><div class="tea-row row2"></div><div class="tea-row row3"></div><div class="tree tree-a"></div><div class="tree tree-b"></div><div class="tree tree-c"></div><div class="hut"><i></i></div><span class="island-label">01 · 六曲窩</span></div>
+        <div class="island island-forest" data-island="1"><div class="island-top"></div><div class="tree tree-a"></div><div class="tree tree-b"></div><div class="tree tree-c"></div><div class="tree tree-d"></div><div class="tree tree-e"></div><span class="island-label">02 · 雲霧林</span></div>
+        <div class="island island-hakka" data-island="2"><div class="island-top"></div><div class="terrace terrace-a"></div><div class="hut"><i></i></div><div class="tree tree-a"></div><div class="tree tree-b"></div><span class="island-label">03 · 伯公下</span></div>
+        <div class="island island-river" data-island="3"><div class="island-top"></div><div class="river-stream"></div><div class="tree tree-a"></div><div class="tree tree-b"></div><span class="island-label">04 · 油羅溪</span></div>
+        <div class="island island-small island-five" data-island="4"><div class="island-top"></div><div class="tree tree-a"></div><span class="island-label">05 · 柑橘園</span></div>
+        <div class="island island-small island-six" data-island="5"><div class="island-top"></div><div class="tree tree-a"></div><span class="island-label">06 · 山徑</span></div>
+        <div class="walker" id="walker" aria-label="你的散步角色"><div class="walker-shadow"></div><div class="walker-body"><div class="walker-head"><i></i></div><div class="walker-coat"></div><div class="walker-pack"></div></div><span class="walker-name" id="walkerName">旅人</span></div>
+      </div><div class="scene-caption"><span><i></i> 立體地景試覽</span><span>DRAG TO DISCOVER</span></div><div class="scene-stamp">FIELD<br>NO. 01</div>
+      </div>
+      <div class="map-ribbon"><span>從新竹橫山出發</span><div class="ribbon-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>走進島嶼群</span><button id="mapListOpen">島嶼索引 <b>↗</b></button></div>
+    </section>
+
+    <section class="island-index" id="stories"><div class="section-head"><div><div class="eyebrow">THE ISLAND ARCHIVE / 01—10</div><h2>每座島，都有一個<span>地方的故事。</span></h2></div><a href="#islandList" class="text-link">展開所有島嶼 <span>↗</span></a></div><div class="island-cards" id="islandList">
+      <button class="island-card card-tea" data-open-island="0"><span class="card-number">01 / TEA LAND</span><span class="card-art art-tea"><i></i><i></i><i></i></span><span class="card-title">六曲窩・茶山日常</span><span class="card-foot">茶，是山寫給人的信 <b>↗</b></span></button>
+      <button class="island-card card-forest" data-open-island="1"><span class="card-number">02 / FOREST</span><span class="card-art art-forest"><i></i><i></i><i></i></span><span class="card-title">雲霧林・山的呼吸</span><span class="card-foot">聽見苔蘚生長的聲音 <b>↗</b></span></button>
+      <button class="island-card card-hakka" data-open-island="2"><span class="card-number">03 / HAKKA</span><span class="card-art art-hakka"><i></i><i></i></span><span class="card-title">伯公下・庄頭的約定</span><span class="card-foot">土地公廟旁的那棵樹 <b>↗</b></span></button>
+      <button class="island-card card-river" data-open-island="3"><span class="card-number">04 / WATER</span><span class="card-art art-river"><i></i><i></i></span><span class="card-title">油羅溪・水的路徑</span><span class="card-foot">順流而下的生活史 <b>↗</b></span></button>
+    </div></section>
+
+    <section class="shop-strip" id="shop"><div class="shop-copy"><div class="eyebrow">OBJECTS FROM THE ISLAND</div><h2>把一點山的日常，<br><em>帶回家。</em></h2><p>島民製作、土地生產。每一件選物<br>都裝著一段認真生活的故事。</p><a class="text-link" href="#products">逛逛山徑選物 <span>↗</span></a></div><div class="products" id="products"><article class="product"><div class="product-image product-tea"><span>01</span><div class="product-pack"><i></i></div><div class="leaf leaf-one"></div><div class="leaf leaf-two"></div></div><div class="product-info"><span>北埔・在地茶作</span><b>東方美人茶・春摘</b><div>$ 680 <button class="add-cart" data-product="東方美人茶・春摘" data-price="680">＋ 加入</button></div></div></article><article class="product"><div class="product-image product-soap"><span>02</span><div class="soap-bar">山徑<br>香皂</div><div class="leaf leaf-one"></div></div><div class="product-info"><span>峨眉・山林配方</span><b>野薑花手工皂</b><div>$ 260 <button class="add-cart" data-product="野薑花手工皂" data-price="260">＋ 加入</button></div></div></article></div></section>
+    <footer><a class="brand" href="#home"><span class="brand-mark">山</span><span>島嶼採集所<small>ISLAND FIELD NOTES</small></span></a><span>沿台三線，收集土地正在發生的事。</span><span>© 2025 ISLAND FIELD NOTES</span></footer>
+  </main>
+
+  <div class="walk-controls" id="walkControls"><span>移動角色</span><button data-move="up" aria-label="向前">↑</button><div><button data-move="left" aria-label="向左">←</button><button data-move="down" aria-label="向後">↓</button><button data-move="right" aria-label="向右">→</button></div><small>WASD / 方向鍵</small></div>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="storyDialog" class="dialog story-dialog"><button class="dialog-close" data-close="storyDialog" aria-label="關閉">×</button><div class="dialog-eyebrow" id="storyMeta">ISLAND 01 / TEA LAND</div><h2 id="storyTitle">六曲窩・茶山日常</h2><p id="storyText"></p><div class="story-footer"><span id="storyTag"></span><button id="walkToIsland">走進這座島 ↗</button></div></dialog>
+  <dialog id="memberDialog" class="dialog member-dialog"><button class="dialog-close" data-close="memberDialog" aria-label="關閉">×</button><div class="dialog-eyebrow">YOUR FIELD NOTES</div><h2 id="memberHeading">成為一位島民</h2><p class="dialog-intro">留下你的名字，從此有一條自己的山徑。</p><form id="memberForm"><label>島民稱呼<input id="memberInput" type="text" placeholder="例如：山林旅人" required maxlength="12"></label><label>選擇你的散步角色<select id="avatarSelect"><option value="hiker">山徑旅人</option><option value="tea">採茶人</option><option value="bird">賞鳥人</option></select></label><button class="form-submit" type="submit">加入島嶼散步 ↗</button></form><div class="member-note">此體驗將會員資料保存在目前瀏覽器。</div></dialog>
+  <dialog id="cartDialog" class="dialog cart-dialog"><button class="dialog-close" data-close="cartDialog" aria-label="關閉">×</button><div class="dialog-eyebrow">ISLAND FINDS</div><h2>你的山徑選物</h2><div id="cartItems"></div><div class="cart-total" id="cartTotal"></div><button class="form-submit" id="checkout">前往結帳 ↗</button></dialog>
+  <dialog id="indexDialog" class="dialog index-dialog"><button class="dialog-close" data-close="indexDialog" aria-label="關閉">×</button><div class="dialog-eyebrow">THE ISLAND ARCHIVE</div><h2>循著山路，一座一座走。</h2><div id="islandIndexRows"></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
